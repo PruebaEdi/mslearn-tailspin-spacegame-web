@@ -1,3 +1,7 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
+ENV PATH $PATH:/root/.dotnet/tools
+RUN dotnet tool install -g dotnet-ef --version 3.1.1
+
 FROM mcr.microsoft.com/devcontainers/dotnet:6.0
 
 # Install NodeJS
